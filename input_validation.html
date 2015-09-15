@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Can Validate Input</h1>
+
+<p>Please input a number between 1 and 10:</p>
+
+<input id="numb1" type="number">
+
+
+<input id="numb2" type="number">
+</br>
+<button type="button" onclick="myFunction()">Submit</button>
+<p id="demo"></p>
+<p id="add"></p>
+<p id="bleh"></p>
+
+<script>
+function myFunction() {
+    var x, y, z;
+	var nx, ny,nz;
+var	text;
+z=0;
+nx = 1;
+ny =5;
+nz =10;
+    // Get the value of the input field with id="numb"
+    x = document.getElementById("numb1").value;
+    y = document.getElementById("numb2").value;
+
+    // If x is Not a Number or less than one or greater than 10
+    if (isNaN(x) || x < 1 || x > 10) {
+        text = "Input not valid";
+    } else {
+        text = "Input OK";
+    }
+	// JavaScript requries '+' before the integers to force/cast the inputs to an int, instead of concatenating a string. ParseInt() may be used alternatively.
+	z = +x + +y;
+
+	document.getElementById("bleh").innerHTML = nx;
+	document.getElementById("add").innerHTML = z;
+    document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html> 
